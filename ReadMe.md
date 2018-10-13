@@ -19,7 +19,7 @@
 <p>The help instruction Website can be used to manage help instructions for use by consumed help instruction components as well as provide contact and usage instructions for consumers:</p>
 <p><b>Requires Asp.Net Core 2.1</b></p>
 <p><b>To build this project a NuGet source feed must be setup as follows: Telerik (https://nuget.telerik.com/nuget)</b></p>
-<p><b>Valid Telerik credentials must be supplied and saved - see NugGet.Config in Web project for further details.</b></p>
+<p><b>Valid Telerik credentials must be supplied and saved.</b></p>
 
 <h3>Help Instruction Component Information</h3>
 <p>
