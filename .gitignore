@@ -10,3 +10,13 @@
 /HelpInstructionSvc/Andgasm.HelpInstruction.API/obj
 /HelpInstructionSvc/Andgasm.HelpInstruction.API.Tests/obj
 /HelpInstructionSvc/Andgasm.HelpInstruction.Web/obj
+/HelpInstructionSvc/Andgasm.HelpInstruction.API/bin/Debug/netcoreapp2.1
+/HelpInstructionSvc/Andgasm.HelpInstruction.API.Tests/bin/Debug/netcoreapp2.1
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web/bin/Debug/netcoreapp2.1
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web.Component/bin/Debug
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web.UITests/bin/Debug
+/HelpInstructionSvc/Andgasm.HelpInstruction.API/bin/Release/netcoreapp2.1
+/HelpInstructionSvc/Andgasm.HelpInstruction.API.Tests/bin/Release/netcoreapp2.1
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web/bin/Release/netcoreapp2.1
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web.Component/bin/Release
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web.UITests/bin/Release
