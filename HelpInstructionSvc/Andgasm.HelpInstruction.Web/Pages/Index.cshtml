@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Help Instruction Administration";
+}
+@addTagHelper *, Andgasm.HelpInstruction.Web
+@addTagHelper *, Andgasm.HelpInstruction.Web.Component
+
+<div>
+    <vc:help-instruction-crud></vc:help-instruction-crud>
+</div>

@@ -1,0 +1,48 @@
+@inject Microsoft.Extensions.Options.IOptions<ConfigurationSettings> Config
+@inject Andgasm.HelpInstruction.Web.Component.HelpInstructionRenderExtensions HelpInstruction
+
+<div>
+    <h3>Help Instruction Administration</h3>
+    <kendo-grid name="grid" height="550">
+        <datasource type="DataSourceTagHelperType.Custom" custom-type="json" server-paging="true" server-filtering="true" server-sorting="true" on-error="handleGridError">
+            <transport parameter-map="mapTransportToJSON">
+                <create url="@Config.Value.HelpInstructionAPIUrl/api/helpinstruction/" datatype="json" content-type="application/json" type="POST" />
+                <read url="@Config.Value.HelpInstructionAPIUrl/api/helpinstruction/Report" datatype="json" content-type="application/json" type="POST" />
+                <update url="@Config.Value.HelpInstructionAPIUrl/api/helpinstruction/" datatype="json" content-type="application/json" data="appendIdToTransportUrl" type="PUT" />
+                <destroy url="@Config.Value.HelpInstructionAPIUrl/api/helpinstruction/" data="appendIdToTransportUrl" type="DELETE" />
+            </transport>
+            <schema>
+                <model id="internalId">
+                    <fields>
+                        <field name="internalId" type="number" />
+                        <field name="hostKey" />
+                        <field name="lookupKey" />
+                        <field name="tooltipText" />
+                    </fields>
+                </model>
+            </schema>
+        </datasource>
+        <editable mode="inline" />
+        <filterable enabled="true" />
+        <sortable enabled="true" />
+        <pageable button-count="5" refresh="true" page-sizes="new int[] { 5, 10, 20, 50, 100 }" page-size="20" />
+        <toolbar>
+            <toolbar-button text="Create New" name="create" />
+        </toolbar>
+        <columns>
+            <column field="internalId" title="Id" hidden="true" />
+            <column field="hostKey" header-template="@HelpInstruction.RenderForKeyAsHtmlString(Component, "HelpInstructionSvc", "Host", " Host", false)" />
+            <column field="lookupKey" header-template="@HelpInstruction.RenderForKeyAsHtmlString(Component, "HelpInstructionSvc", "LookupKey", " Key", false)" />
+            <column field="tooltipText" width="500" header-template="@HelpInstruction.RenderForKeyAsHtmlString(Component, "HelpInstructionSvc", "TooltipText", " Tooltip", false)" />
+            <column width="195">
+                <commands>
+                    <column-command text="Edit" name="edit"></column-command>
+                    <column-command text="Delete" name="destroy"></column-command>
+                </commands>
+            </column>
+        </columns>
+    </kendo-grid>
+</div>
+
+@HelpInstruction.RenderStandaloneStylesAsHtmlString(Html)
+@HelpInstruction.RenderStandaloneScriptsAsHtmlString(Html, false)

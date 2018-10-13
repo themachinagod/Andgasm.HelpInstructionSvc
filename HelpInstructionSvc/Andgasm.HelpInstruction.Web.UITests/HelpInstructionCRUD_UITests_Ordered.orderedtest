@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="HelpInstructionCRUD_UITests_Ordered" storage="c:\andgasmroot\helpinstructionsvc\helpinstructionsvc\andgasm.helpinstruction.web.uitests\helpinstructioncrud_uitests_ordered.orderedtest" id="2dfa8bc2-dab3-4332-80ac-15b92ac26c90" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="07c96db9-7991-813e-ef0c-668c99d956c7" name="HelpInstruction_ValidCreate" storage="bin\debug\andgasm.helpinstruction.web.uitests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="23a5a4eb-40bc-7a32-363c-5d7cc45f52b9" name="HelpInstruction_ValidUpdate" storage="bin\debug\andgasm.helpinstruction.web.uitests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="eb26181f-9af5-b068-48a5-43c470e46695" name="HelpInstruction_ValidDelete" storage="bin\debug\andgasm.helpinstruction.web.uitests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -1,0 +1,3 @@
+﻿@model Andgasm.HelpInstruction.Web.Component.HelpInstructionModel
+<script src="~/api/resource/helpinstruction/helpinstruction.js" asp-append-version="true" defer></script>
+<script type="text/javascript" defer>$(document).ready(function () { wireupHelpTooltipEvents(@Model.loadOnDemand.ToString().ToLowerInvariant()); });</script>

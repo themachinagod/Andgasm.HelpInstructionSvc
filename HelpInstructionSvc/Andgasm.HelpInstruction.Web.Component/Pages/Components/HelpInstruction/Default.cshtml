@@ -1,0 +1,4 @@
+﻿@model Andgasm.HelpInstruction.Web.Component.HelpInstructionModel
+<div style="display: inline-block"><img class='helplink' data-lookupkey='@Model.lookupKey' data-apiroot='@Model.apiUrl' src='~/api/resource/helpinstruction/helpicon.png' /><span style='text-align: left;'>@Model.label</span><div class='helptooltip'>@Model.tooltipText</div></div>
+@if (!Model.suppressStyles) {  @Html.Partial("Components/HelpInstruction/PartialStyles"); }
+@if (!Model.suppressScripts) { @Html.Partial("Components/HelpInstruction/PartialScripts"); }

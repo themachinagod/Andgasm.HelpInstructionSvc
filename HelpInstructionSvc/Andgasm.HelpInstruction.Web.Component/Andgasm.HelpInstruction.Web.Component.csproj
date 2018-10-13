@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Danny Brown</Authors>
+    <Company>Andgasm Software Solutions</Company>
+    <Copyright>Andgasm Software Solutions</Copyright>
+    <Description>Help instruction tooltip component that hooks to help instruction API and can be managed via help instruction web.</Description>
+    <Version>0.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Components\HelpInstruction\helpicon.png" />
+    <None Remove="Pages\Components\HelpInstruction\HelpInstruction.css" />
+    <None Remove="Pages\Components\HelpInstruction\HelpInstruction.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Components\HelpInstruction\helpicon.png" />
+    <EmbeddedResource Include="Pages\Components\HelpInstruction\HelpInstruction.css" />
+    <EmbeddedResource Include="Pages\Components\HelpInstruction\HelpInstruction.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Andgasm.Web.Components.Core" Version="0.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.2" />
+  </ItemGroup>
+</Project>

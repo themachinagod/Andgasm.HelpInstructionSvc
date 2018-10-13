@@ -1,0 +1,7 @@
+﻿To execute UI tests the executing machine must have performed the following steps before first execution:
+
+Requires Asp.Net 4.6
+
+1) Install testing components: https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting
+2) Ensure Chrome Driver is latest: http://chromedriver.storage.googleapis.com/2.42/chromedriver_win32.zip (latest as of doc date)
+	-> Download zip and extract executable to: C:\Program Files (x86)\Common Files\microsoft shared\VSTT\Cross Browser Selenium Components\

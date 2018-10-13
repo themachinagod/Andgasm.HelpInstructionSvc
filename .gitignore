@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/HelpInstructionSvc/.vs
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web/node_modules
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web.Component/obj
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web.UITests/obj

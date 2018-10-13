@@ -1,0 +1,106 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "Usage";
+}
+@inject Microsoft.Extensions.Options.IOptions<ConfigurationSettings> Config
+
+
+<h3>Help Instruction Component Information</h3>
+<p>
+    The help instruction tooltip component is a simple instruction popup that reads tooltip data from the help instruction API for a specific key.
+    This data can be read either at load time or on demand as the help instruction is invoked (by hovering over the help icon).
+    This on demand loading means that the Html footprint for the help instruction component is minimised and the tooltip data only loaded when required.
+</p>
+<p>
+    The help instruction tooltip data can be managed through the admin web portal, users can add edit and delete any help instructions for any given host and lookup key.
+    When a help instruction component is used on a page (for a specific host/key) the component will use this key data to retrieve the correct tooltip.
+    Note that after a component initialises its tooltip data (either in pre-fetch or on-demand) for the duration of the page life cycle that data is cached and no subsequent calls will be made until the page is refreshed or reloaded.
+</p>
+<p>
+    The default admin web portal instance can be found at the following location;
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="@HttpContext.Request.Scheme://@HttpContext.Request.Host">@HttpContext.Request.Scheme://@HttpContext.Request.Host</a>
+</p>
+<p>
+    The help instruction tooltip component can be utilised on any Asp Net Core web site simple by adding the component reference from the official Nuget feed;
+</p>
+
+<ul>
+    <li><b>From Package-Manager</b>: Install-Package Andgasm.HelpInstruction.Web.Component -Version 0.0.1</li>
+    <li><b>From DotNet CLI</b>: dotnet add package Andgasm.HelpInstruction.Web.Component --version 0.0.1</li>
+    <li><b>From Nuget Visual Studio GUI</b>: Search for Andgasm.HelpInstruction.Web.Component</li>
+</ul>
+
+<p>
+    Details of the published help instruction component package can be found here:
+</p>
+
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.nuget.org/packages/Andgasm.HelpInstruction.Web.Component/">https://www.nuget.org/packages/Andgasm.HelpInstruction.Web.Component/</a>
+</p>
+<p>
+    Note that any use of a help instruction component on a web site will require a path to the root of the API instance which can be found at the following location;
+</p>
+<p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="@Config.Value.HelpInstructionAPIUrl">@Config.Value.HelpInstructionAPIUrl</a>
+</p>
+
+<h3>Help Instruction Component Usage</h3>
+
+<p>
+    The help instruction component can be invoked in a few different ways depending on the consumers development preferances;
+</p>
+<ul>
+    <li>Tag Helper</li>
+    <li>ViewComponent Invoke</li>
+    <li>HelpInstruction Render Extensions</li>
+</ul>
+<br />
+
+<h4>Tag Helper Usage Example</h4>
+<p>
+    To place a help instruction component on a view using the tag helpers use the following markup on your view at the location you wish the help icon to appear;
+</p>
+<xmp style="margin-top: -20px">
+    addTagHelper *, Andgasm.HelpInstruction.Web.Component
+    ...
+    ...
+    <vc:help-instruction apirooturl="https://localhost:44300" ondemand="true" hostkey="testhost" datakey="testkey"
+                         label="test label" suppressscripts="false" suppressstyles="false"></vc:help-instruction>
+</xmp>
+
+<p>
+    The above indicates that a help instruction component should be rendered on the page in position. The component will look to the specified
+    api url using both the specified host key and specified data to retrieve the correct tooltip data. As the component has been told to load
+    on-demand the call for the tooltip data will not happen until the user rolls over the help instruction component element, at which point the
+    data will be retrieved and the tooltip will be shown until the user hovers away.
+</p>
+<p>
+    Note that the flags for suppressing scripts and styles are set to
+    false which means the full help component markup will be renderd with script and style refs. If these were set to true then the component would
+    render only it's mark up and not the dependency links which can be loaded seperatly in a page header or footer, this is covered in the Render Extensions section.
+</p>
+<p>
+    Also note that there is a known limitation with TagHelpers where optional parameters must be specified in the markup.
+</p><br />
+
+<h4>Razor Invoke Usage Example</h4>
+<p>
+    To place a help instruction component on a view using the razor syntax use the following markup on your view at the location you wish the help icon to appear;
+</p>
+<xmp style="margin-top: -20px">
+    await Component.InvokeAsync("HelpInstruction", new { apirooturl = "https://localhost:44300" 
+                                                         ondemand = "true" hostkey = "testhost" datakey = "testkey"
+                                                         label = "test label" suppressscripts = "false" suppressstyles = "false" })
+</xmp>
+<p>
+    As with the TagHelper example, the above will render in the same way, the only difference being how it was invoked in the view. Note that a consuming page can invoke 
+    any number of components in a mixture of ways.
+</p><br />
+
+<h4>Render Extensions Usage Example</h4>
+
+TODO!
+
