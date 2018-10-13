@@ -7,3 +7,6 @@
 /HelpInstructionSvc/Andgasm.HelpInstruction.Web/node_modules
 /HelpInstructionSvc/Andgasm.HelpInstruction.Web.Component/obj
 /HelpInstructionSvc/Andgasm.HelpInstruction.Web.UITests/obj
+/HelpInstructionSvc/Andgasm.HelpInstruction.API/obj
+/HelpInstructionSvc/Andgasm.HelpInstruction.API.Tests/obj
+/HelpInstructionSvc/Andgasm.HelpInstruction.Web/obj

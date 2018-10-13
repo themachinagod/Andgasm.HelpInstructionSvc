@@ -15,7 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F27D2AA7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Artifacts", "Artifacts", "{8025D5CE-9775-4F47-A586-6E19C70F8774}"
 	ProjectSection(SolutionItems) = preProject
-		Andgasm.HelpInstruction.Web.Component\obj\Release\Andgasm.HelpInstruction.Web.Component.0.0.1.nuspec = Andgasm.HelpInstruction.Web.Component\obj\Release\Andgasm.HelpInstruction.Web.Component.0.0.1.nuspec
 		CodeCoverage.runsettings = CodeCoverage.runsettings
 		..\ReadMe.md = ..\ReadMe.md
 	EndProjectSection
@@ -58,28 +57,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29A0B79D-071D-406B-B7D7-16C636FBA8EE}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://andgasm.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Andgasm.HelpInstruction.API\\Andgasm.HelpInstruction.API.csproj
-		SccProjectName1 = Andgasm.HelpInstruction.API
-		SccLocalPath1 = Andgasm.HelpInstruction.API
-		SccProjectUniqueName2 = Andgasm.HelpInstruction.Web\\Andgasm.HelpInstruction.Web.csproj
-		SccProjectName2 = Andgasm.HelpInstruction.Web
-		SccLocalPath2 = Andgasm.HelpInstruction.Web
-		SccProjectUniqueName3 = Andgasm.HelpInstruction.Web.Component\\Andgasm.HelpInstruction.Web.Component.csproj
-		SccProjectName3 = Andgasm.HelpInstruction.Web.Component
-		SccLocalPath3 = Andgasm.HelpInstruction.Web.Component
-		SccProjectUniqueName4 = Andgasm.HelpInstruction.API.Tests\\Andgasm.HelpInstruction.API.Tests.csproj
-		SccProjectTopLevelParentUniqueName4 = HelpInstructionSvc.sln
-		SccProjectName4 = Andgasm.HelpInstruction.API.Tests
-		SccLocalPath4 = Andgasm.HelpInstruction.API.Tests
-		SccProjectUniqueName5 = Andgasm.HelpInstruction.Web.UITests\\Andgasm.HelpInstruction.Web.UITests.csproj
-		SccProjectTopLevelParentUniqueName5 = HelpInstructionSvc.sln
-		SccProjectName5 = Andgasm.HelpInstruction.Web.UITests
-		SccLocalPath5 = Andgasm.HelpInstruction.Web.UITests
 	EndGlobalSection
 EndGlobal
