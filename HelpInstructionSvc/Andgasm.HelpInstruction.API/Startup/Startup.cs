@@ -46,9 +46,8 @@ namespace Andgasm.HelpInstruction.API.Startup
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, settings =>
+                app.UseSwaggerUi3WithApiExplorer(settings =>
                 {
-                    settings.GeneratorSettings.IsAspNetCore = true;
                     settings.GeneratorSettings.Title = "Help Instruction Service";
                     settings.GeneratorSettings.DefaultPropertyNameHandling = PropertyNameHandling.CamelCase;
                     settings.GeneratorSettings.DefaultEnumHandling = EnumHandling.String;
